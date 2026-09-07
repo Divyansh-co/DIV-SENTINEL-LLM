@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  sentinel-prompt:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sentinel-prompt-firewall
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8000
+      - DEBUG=false
+      - DATABASE_URL=sqlite+aiosqlite:///data/sentinel.db
+      - API_KEYS=sp_live_9f8a3c2e1b7d4a6e8f0c2b4a6d8e0f1a,sp_test_1234567890abcdef
+    volumes:
+      - sentinel-data:/app/data
+
+volumes:
+  sentinel-data:
+    driver: local
