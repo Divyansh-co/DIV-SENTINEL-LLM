@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Shield, Flame, Activity, Lock, Terminal, Cpu, Zap, CheckCircle2, ShieldAlert, Sparkles, BarChart3 } from 'lucide-react';
+import { Shield, Flame, Activity, Lock, Terminal, Cpu, Zap, CheckCircle2, ShieldAlert, Sparkles, BarChart3, ExternalLink } from 'lucide-react';
 import Navbar from './components/Navbar';
 import HeroBanner from './components/HeroBanner';
 import MetricCard from './components/MetricCard';
@@ -179,7 +179,7 @@ export default function App() {
         onClose={() => setFeedbackScan(null)}
       />
 
-      {/* High-Tech Enterprise Footer */}
+      {/* High-Tech Enterprise Footer with Divyansh Mishra Watermark */}
       <footer className="border-t border-pearl-500/10 bg-[#060608] py-5 mt-12 text-xs font-mono text-pearl-400">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="flex items-center space-x-2.5">
@@ -189,13 +189,38 @@ export default function App() {
             <span className="text-pearl-100 font-bold">SentinelPrompt</span>
             <span className="text-pearl-400">— Enterprise LLM Prompt Injection Firewall</span>
           </div>
-          <div className="flex items-center space-x-4">
-            <span className="text-pearl-400">REST API & SDK (Port 8000)</span>
+          <div className="flex items-center space-x-3 text-center sm:text-right">
+            <span className="text-pearl-300">
+              Architected & Engineered by{' '}
+              <a 
+                href="https://github.com/Divyansh-co" 
+                target="_blank" 
+                rel="noreferrer" 
+                className="text-ember-400 hover:text-ember-300 font-bold underline decoration-ember-500/40 underline-offset-2"
+              >
+                Divyansh Mishra
+              </a>
+            </span>
             <span className="text-ember-500">&bull;</span>
             <span className="text-jade-400 font-semibold">Autonomous Defense Grid Active</span>
           </div>
         </div>
       </footer>
+
+      {/* Persistent Floating Watermark Badge */}
+      <div className="fixed bottom-4 right-4 z-40 flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-[#0D0D11]/90 backdrop-blur-md border border-ember-500/40 shadow-lg shadow-ember-950/70 text-xs font-mono select-none hover:border-ember-400 hover:scale-105 transition-all group">
+        <span className="w-2 h-2 rounded-full bg-ember-500 animate-pulse"></span>
+        <span className="text-pearl-400 text-[11px]">Architect:</span>
+        <a
+          href="https://github.com/Divyansh-co/DIV-SENTINEL-LLM"
+          target="_blank"
+          rel="noreferrer"
+          className="text-white font-bold tracking-wide group-hover:text-ember-300 transition-colors flex items-center space-x-1"
+        >
+          <span>Divyansh Mishra</span>
+          <ExternalLink className="w-3 h-3 text-ember-400 opacity-70 group-hover:opacity-100" />
+        </a>
+      </div>
     </div>
   );
 }

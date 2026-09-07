@@ -5,14 +5,14 @@ import { Sparkles, Flame, Code, ExternalLink, Check, ShieldCheck, Zap, Activity 
 export default function HeroBanner({ onLaunchPlayground, onOpenSdkModal }) {
   return (
     <div className="relative pt-6 pb-4 text-center max-w-4xl mx-auto">
-      {/* Release Badge with Molten Ember accent */}
+      {/* Release Badge with Molten Ember accent & Watermark */}
       <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-ember-950/60 border border-ember-500/40 text-ember-300 text-xs font-medium mb-4 shadow-ember-sm animate-fadeIn">
         <span className="w-2 h-2 rounded-full bg-ember-500 animate-pulse shadow-sm shadow-ember-500/50" />
         <span className="font-mono font-bold tracking-wider text-ember-300">SENTINEL SHIELD 3.0</span>
         <span className="text-pearl-500/30">|</span>
         <span className="flex items-center gap-1 font-mono text-[11px]">
           <Sparkles className="w-3.5 h-3.5 text-ember-400" />
-          Multi-Layered LLM Prompt Injection Firewall
+          Engineered by <strong className="text-white font-semibold">Divyansh Mishra</strong>
         </span>
       </div>
 

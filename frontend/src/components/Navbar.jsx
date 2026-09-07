@@ -41,7 +41,7 @@ export default function Navbar({ activeTab, setActiveTab, onOpenSdkModal }) {
               </span>
             </div>
             <span className="text-[10px] text-pearl-400 font-mono hidden sm:inline -mt-0.5">
-              LLM Prompt Injection Firewall
+              LLM Prompt Injection Firewall &bull; <span className="text-ember-400 font-semibold">Divyansh Mishra</span>
             </span>
           </div>
         </div>
@@ -70,6 +70,20 @@ export default function Navbar({ activeTab, setActiveTab, onOpenSdkModal }) {
 
         {/* Right CTA & Controls */}
         <div className="flex items-center gap-2.5">
+          {/* Architect Watermark Badge */}
+          <div className="hidden xl:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#121215] border border-ember-500/35 text-xs shadow-sm font-mono">
+            <span className="text-pearl-400 text-[11px]">Architect:</span>
+            <a
+              href="https://github.com/Divyansh-co"
+              target="_blank"
+              rel="noreferrer"
+              className="text-white font-bold hover:text-ember-300 transition-colors flex items-center gap-1"
+            >
+              <span>Divyansh Mishra</span>
+              <ExternalLink className="w-3 h-3 text-ember-400" />
+            </a>
+          </div>
+
           {/* Live Engine Status */}
           <div className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#121215] border border-jade-400/40 text-xs shadow-sm font-mono">
             <span className="relative flex h-2 w-2">
